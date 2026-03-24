@@ -1,0 +1,26 @@
+/* TextPressure — variable font weight effect (from reactbits.dev) */
+
+.text-pressure-container {
+  position: relative;
+  width: 100%;
+  cursor: default;
+  user-select: none;
+}
+
+.text-pressure-title {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 0;
+  white-space: nowrap;
+  text-align: center;
+  font-weight: 200;
+}
+
+.text-pressure-char {
+  display: inline-block;
+  will-change: font-weight, transform, opacity;
+  transition: font-weight 0.05s ease-out, transform 0.1s ease-out, opacity 0.1s ease-out;
+  font-weight: 200;
+}
