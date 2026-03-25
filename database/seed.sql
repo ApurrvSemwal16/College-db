@@ -1,16 +1,14 @@
 USE college_db;
 
--- ============================================================
 -- 3 Departments (head_id set to NULL initially, updated below)
--- ============================================================
+
 INSERT INTO department (dept_name) VALUES
 ('Computer Science'),
 ('Mathematics'),
 ('Physics');
 
--- ============================================================
 -- 6 Instructors (2 per department)
--- ============================================================
+
 INSERT INTO instructor (name, email, dept_id) VALUES
 ('Dr. Ananya Sharma',    'ananya.sharma@college.edu',    1),
 ('Prof. Rajesh Kumar',   'rajesh.kumar@college.edu',     1),
@@ -24,9 +22,8 @@ UPDATE department SET head_id = 1 WHERE dept_id = 1;  -- Dr. Ananya Sharma heads
 UPDATE department SET head_id = 3 WHERE dept_id = 2;  -- Dr. Priya Mehta heads Math
 UPDATE department SET head_id = 5 WHERE dept_id = 3;  -- Dr. Kavita Reddy heads Physics
 
--- ============================================================
 -- 8 Courses
--- ============================================================
+
 INSERT INTO course (course_name, credits, dept_id, instructor_id) VALUES
 ('Data Structures & Algorithms',  4, 1, 1),
 ('Database Management Systems',   4, 1, 2),
@@ -37,9 +34,8 @@ INSERT INTO course (course_name, credits, dept_id, instructor_id) VALUES
 ('Classical Mechanics',           4, 3, 5),
 ('Quantum Physics',               3, 3, 6);
 
--- ============================================================
 -- 15 Students
--- ============================================================
+
 INSERT INTO student (name, email, phone, semester) VALUES
 ('Aarav Verma',       'aarav.verma@student.edu',       '9876543210', 3),
 ('Diya Nair',         'diya.nair@student.edu',         '9876543211', 5),
@@ -57,9 +53,8 @@ INSERT INTO student (name, email, phone, semester) VALUES
 ('Nisha Agarwal',     'nisha.agarwal@student.edu',     '9876543223', 7),
 ('Dev Thakur',        'dev.thakur@student.edu',        '9876543224', 1);
 
--- ============================================================
 -- 30 Enrollments (each student gets 2 courses)
--- ============================================================
+
 INSERT INTO enrollment (student_id, course_id, enrollment_date, grade) VALUES
 (1,  1, '2025-07-15', 'A'),
 (1,  4, '2025-07-15', 'B+'),

@@ -350,7 +350,7 @@ export default function App() {
       >
         <TextPressure
           text="College Database"
-          textColor="#ffffff"
+          textColor="#000000"
           minWeight={100}
           maxWeight={900}
           className="title-pressure"
